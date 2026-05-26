@@ -1,10 +1,19 @@
-# 🌐 CabalRadar: Swarms Multi-Agent Solana Insider Wallet Tracker
+# 🌐 CabalRadar ($COBWEB): Swarms Multi-Agent Solana Insider Wallet Tracker
 
 <p align="center">
   <img src="frontend/public/logo.png" alt="CabalRadar Logo" width="120" height="120" />
 </p>
 
-**CabalRadar** is a premium, state-of-the-art security intelligence dashboard built to expose hidden token creator groups, wallet coordination patterns, and Sybil clusters on the Solana blockchain. It leverages the powerful **Swarms AI Framework** alongside deep on-chain transaction graph analytics to calculate launch-block concentration metrics and assign clear risk scores to any Solana token address in real time.
+**CabalRadar ($COBWEB)** is a premium, state-of-the-art security intelligence dashboard built to expose hidden token creator groups, wallet coordination patterns, and Sybil clusters on the Solana blockchain. It leverages the powerful **Swarms AI Framework** alongside deep on-chain transaction graph analytics to calculate launch-block concentration metrics and assign clear risk scores to any Solana token address in real time.
+
+---
+
+## 🕷️ $COBWEB Token & Utility
+
+**$COBWEB** is the native utility token powering the CabalRadar ecosystem. It aligns incentives between community threat hunters and developer-auditors:
+*   **Premium Scan Access**: Hold/stake `$COBWEB` to unlock advanced multi-hop wallet trace depth, historical dev launch blacklists, and PDF security audit exports.
+*   **Agent Priority Allocation**: Holders receive priority compute allocation on the Swarms decision agent loops when scanning active launches.
+*   **Threat Bounty Pool**: Community members who flag new serial rugging addresses receive rewards from the `$COBWEB` intelligence pool.
 
 ---
 
