@@ -1,4 +1,4 @@
-# 🌐 CabalRadar ($COBWEB): Swarms Multi-Agent Solana Insider Wallet Tracker
+# CabalRadar ($COBWEB): Swarms Multi-Agent Solana Insider Wallet Tracker
 
 <p align="center">
   <img src="frontend/public/logo.png" alt="CabalRadar Logo" width="120" height="120" />
@@ -8,7 +8,7 @@
 
 ---
 
-## 🕷️ $COBWEB Token & Utility
+## $COBWEB Token & Utility
 
 **$COBWEB** is the native utility token powering the CabalRadar ecosystem. It aligns incentives between community threat hunters and developer-auditors:
 *   **Premium Scan Access**: Hold/stake `$COBWEB` to unlock advanced multi-hop wallet trace depth, historical dev launch blacklists, and PDF security audit exports.
@@ -17,7 +17,7 @@
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 *   **Swarms Multi-Agent Core**: Powered by a collaborative group of 4 specialized autonomous agents handling tasks from initial data fetching to graph clustering and high-level risk reasoning.
 *   **Dynamic Wallet Clustering Graph**: Visual D3-like interactive physics canvas mapping genesis funding origins of early buyers to isolate sybil cartels.
@@ -28,7 +28,7 @@
 
 ---
 
-## 🤖 The Swarms Multi-Agent Architecture
+## The Swarms Multi-Agent Architecture
 
 Instead of relying on single linear scripts, CabalRadar utilizes **4 distinct agents** operating in a swarm coordinate model:
 
@@ -41,25 +41,25 @@ graph TD
     E --> F[Interactive Console UI & PDF Audit Report]
 ```
 
-### 1. 📥 Data Ingestion Agent
+### 1. Data Ingestion Agent
 *   **Role**: Rapidly interfaces with Solana JSON-RPC endpoints (e.g. Helius) and API providers (GoPlus Labs).
 *   **Task**: Extracts early block signatures, token supply metrics, metadata properties, and developer wallet details.
 
-### 2. 🗺️ Network Mapping Agent
+### 2. Network Mapping Agent
 *   **Role**: On-chain relationship analyzer.
 *   **Task**: Inspects absolute genesis transaction traces of early buyers to find if multiple wallets share a common SOL funder, feeding data into the graphical UI layout.
 
-### 3. 🛡️ Reputation Evaluator Agent
+### 3. Reputation Evaluator Agent
 *   **Role**: Developer and contract behavior auditor.
 *   **Task**: Validates contract authorities (mint authority renounced, freeze authority status), liquidity pool locking records, and developer history.
 
-### 4. 🧠 CabalRadarAgent (Lead Coordinator)
+### 4. CabalRadarAgent (Lead Coordinator)
 *   **Role**: LLM-driven Decision Engine (implemented using the `swarms` SDK package).
 *   **Task**: Receives structured metrics from the helper agents, performs multi-loop threat validation, and generates detailed final reasoning logs and audit reports.
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 *   **Frontend**:
     *   **React** & **TypeScript** (built with Vite)
@@ -74,7 +74,7 @@ graph TD
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### 1. Prerequisites
 Make sure you have python (3.10+) and node (18+) installed.
@@ -125,6 +125,6 @@ Make sure you have python (3.10+) and node (18+) installed.
 
 ---
 
-## 🛡️ License
+## License
 
 This project is licensed under the MIT License. Built with ❤️ using the [Swarms Framework](https://github.com/kyegomez/swarms).
