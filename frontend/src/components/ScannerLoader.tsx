@@ -48,7 +48,7 @@ export function ScannerLoader({ address, isScanning, onClose }: ScannerLoaderPro
   const [progress, setProgress] = useState(0);
   const [currentTipIndex, setCurrentTipIndex] = useState(0);
   const [logs, setLogs] = useState<string[]>([]);
-  const terminalEndRef = useRef<HTMLDivElement>(null);
+  const logBodyRef = useRef<HTMLDivElement>(null);
   
   const shortAddress = address 
     ? `${address.slice(0, 6)}...${address.slice(-6)}` 
@@ -151,8 +151,8 @@ export function ScannerLoader({ address, isScanning, onClose }: ScannerLoaderPro
 
   // Scroll to bottom of terminal
   useEffect(() => {
-    if (terminalEndRef.current) {
-      terminalEndRef.current.scrollIntoView({ behavior: "smooth" });
+    if (logBodyRef.current) {
+      logBodyRef.current.scrollTop = logBodyRef.current.scrollHeight;
     }
   }, [logs]);
 
@@ -275,7 +275,7 @@ export function ScannerLoader({ address, isScanning, onClose }: ScannerLoaderPro
               <h3 className="section-title" style={{ margin: 0, fontSize: '12px' }}>Real-time Audit Stream</h3>
             </div>
             
-            <div className="terminal-log-body font-mono">
+            <div ref={logBodyRef} className="terminal-log-body font-mono">
               <div className="grid-overlay"></div>
               <div className="terminal-log-content">
                 {logs.map((log, index) => (
@@ -286,7 +286,6 @@ export function ScannerLoader({ address, isScanning, onClose }: ScannerLoaderPro
                     </span>
                   </div>
                 ))}
-                <div ref={terminalEndRef} />
               </div>
             </div>
           </div>

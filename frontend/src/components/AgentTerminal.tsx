@@ -105,12 +105,12 @@ interface AgentTerminalProps {
 export const AgentTerminal: React.FC<AgentTerminalProps> = ({ logs = [], report = "", isScanning }) => {
   const [visibleLogs, setVisibleLogs] = useState<string[]>([]);
   const [showReport, setShowReport] = useState(false);
-  const terminalEndRef = useRef<HTMLDivElement | null>(null);
+  const logBodyRef = useRef<HTMLDivElement | null>(null);
 
   // Scroll to bottom of terminal
   useEffect(() => {
-    if (terminalEndRef.current) {
-      terminalEndRef.current.scrollIntoView({ behavior: "smooth" });
+    if (logBodyRef.current) {
+      logBodyRef.current.scrollTop = logBodyRef.current.scrollHeight;
     }
   }, [visibleLogs, showReport, isScanning]);
 
@@ -170,7 +170,7 @@ export const AgentTerminal: React.FC<AgentTerminalProps> = ({ logs = [], report 
         </div>
       </div>
 
-      <div className="terminal-body">
+      <div ref={logBodyRef} className="terminal-body">
         {/* Animated grid overlay */}
         <div className="grid-overlay" />
 
@@ -214,7 +214,6 @@ export const AgentTerminal: React.FC<AgentTerminalProps> = ({ logs = [], report 
               </div>
             </div>
           )}
-          <div ref={terminalEndRef} />
         </div>
       </div>
     </div>
