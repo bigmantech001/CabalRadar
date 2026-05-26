@@ -1,0 +1,36 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Node modules & builds
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+# Python cache & build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+backend/__pycache__/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Logs and databases
+*.log
+logs/
+scratch/
+agent_workspace/
+
+# OS/Editor configs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
