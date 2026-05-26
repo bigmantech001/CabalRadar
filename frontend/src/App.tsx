@@ -8,8 +8,8 @@ import { AgentTerminal } from "./components/AgentTerminal";
 import { LandingPage } from "./components/LandingPage";
 import { ScannerLoader } from "./components/ScannerLoader";
 import type { TokenScanData, ScanResponse } from "./utils/types";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
 
-// Constant Solana token addresses for sandbox
 export default function App() {
   const [viewState, setViewState] = useState<"landing" | "app">("landing");
   const [address, setAddress] = useState("");
@@ -26,7 +26,7 @@ export default function App() {
   useEffect(() => {
     const checkBackend = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/health");
+        const response = await fetch(`${API_BASE_URL}/api/health`);
         setBackendOnline(response.ok);
       } catch (e) {
         setBackendOnline(false);
@@ -41,7 +41,7 @@ export default function App() {
   useEffect(() => {
     const fetchExploits = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/exploits");
+        const response = await fetch(`${API_BASE_URL}/api/exploits`);
         if (response.ok) {
           const resData = await response.json();
           if (resData.success) {
@@ -71,7 +71,7 @@ export default function App() {
 
     try {
       // Query FastAPI backend
-      const response = await fetch(`http://127.0.0.1:8000/api/scan?address=${targetAddress}`);
+      const response = await fetch(`${API_BASE_URL}/api/scan?address=${targetAddress}`);
       if (response.ok) {
         const result: ScanResponse = await response.json();
         setTimeout(() => {
